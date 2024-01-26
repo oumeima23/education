@@ -1,0 +1,27 @@
+<div class="container-fluid bg-primary  mb-5" >
+    <div class="row align-items-center px-3">
+      <div class="col-lg-6 text-center text-lg-left">
+        <h3 class="display-3 font-weight-bold text-white"style="text-center">Liste des Courses</h3> 
+      </div>
+      <div class="col-lg-6 text-center text-lg-right">
+        <img class="img-fluid mt-5" src="assets/img/header.png" alt="" style="height: 250px;" />
+      </div>
+    </div>
+  </div>
+
+
+<form class="form-inline "  >
+    <div class="form-group col-md-6">
+        <h1>Courses</h1>
+        <select  class="form-control" [(ngModel)]="courseId" name="courseId">
+          <option [value]=null selected  disabled>Sélectionner</option>
+          <option  *ngFor="let course of courses " [value]="course._id" >{{course.nom}}</option>
+         
+        </select>
+      </div>
+
+     <div>
+    <button type="submit" class="btn btn-primary " (click)=" affectStudentToCourse()">Affecter</button>
+    </div>
+   
+  </form>

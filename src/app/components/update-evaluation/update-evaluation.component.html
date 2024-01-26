@@ -1,0 +1,48 @@
+
+<form [formGroup]="formEval" (ngSubmit)="updateEval()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+         
+            <h1>Course : <span *ngIf="evaluation != null && evaluation != undefined"> {{evaluation.courseName}}</span></h1>
+            
+           
+          </div>
+          <div class="form-group col-md-6">
+            <h1>Student : <span *ngIf="evaluation != null && evaluation != undefined">  {{evaluation.studentName}}</span></h1>
+           
+          
+          </div>
+          </div>
+          <div class="form-row "  >
+            <div class="form-group col-md-4">
+                <label class="sr-only" for="inlineFormInputName2">Note</label>
+                <div class=" mb-2 mr-sm-2" >
+                    <input type="number" formControlName="note" class="form-control " id="inlineFormInputName2" placeholder="Note">
+                    <div style="color: red;" *ngIf="submitted && formEval.get('note').hasError('required')">
+                        Note est obligatoire
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="sr-only" for="inlineFormInputGroupUsername2">Eval</label>
+                <div class=" mb-2 mr-sm-2">
+                  <input type="text" formControlName="eval" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Eval">
+                  <div style="color: red;" *ngIf="submitted && formEval.get('eval').hasError('required')">
+                    Evaluation est obligatoire
+                </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary " >Modifier</button>
+
+            </div>
+          
+
+        
+             <div>
+            </div>
+           
+        </div>
+</form>
+

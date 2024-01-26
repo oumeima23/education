@@ -1,0 +1,39 @@
+<div class="container-fluid bg-primary  mb-5">
+    <div class="row align-items-center px-3">
+      <div class="col-lg-6 text-center text-lg-left">
+        <h3 class="display-3 font-weight-bold text-white"style="text-center">Dashboard</h3>
+       
+      </div>
+      <div class="col-lg-6 text-center text-lg-right">
+        <img class="img-fluid mt-5" src="assets/img/header.png" alt="" style="height: 250px" />
+      </div>
+    </div>
+  </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Courses</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Teachers</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Students</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Parents</a>
+      </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <app-courses-table></app-courses-table>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+       <app-teachers-table></app-teachers-table> 
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <app-students-table></app-students-table>
+    </div>
+    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+        <app-parents-table></app-parents-table>
+    </div>
+  </div>

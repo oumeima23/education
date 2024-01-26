@@ -1,0 +1,30 @@
+
+
+
+  <div class="widget-next-match container">
+    <table class="table custom-table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">nom</th>
+          <th scope="col">description</th>
+          <th scope="col">duration</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses ">
+          <th scope="row">{{course._id}}</th>
+          <td>{{course.nom}}</td>
+          <td>{{course.description}}</td>
+          <td>{{course.duration}}</td>
+          <td>
+              <button style="margin-right: 10px;" class="btn btn-success"(click)="goToDisplay(course._id)" ><i class="fas fa-eye"></i></button>
+          
+              <button class="btn btn-danger" (click)="deleteCourseById(course._id)"><i class="fas fa-trash"></i></button>
+          </td>
+        </tr>
+    
+      </tbody>
+    </table>
+</div>

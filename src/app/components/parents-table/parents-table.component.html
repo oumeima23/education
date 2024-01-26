@@ -1,0 +1,29 @@
+<div class="widget-next-match container">
+  <table class="table custom-table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">tel</th>
+        <th scope="col">telChild</th>
+        <th scope="col">adress</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let parent of parentList">
+        <th scope="row">{{parent._id}}</th>
+        <td>{{parent.fullName}}</td>
+        <td>{{parent.email}}</td>
+        <td>{{parent.tel}}</td>
+        <td>{{parent.telChild}}</td>
+        <td>{{parent.adress}}</td>
+       
+      </tr>
+  
+    </tbody>
+  </table>
+</div>
+
+

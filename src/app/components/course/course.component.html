@@ -1,0 +1,24 @@
+<div class="card border-0 bg-light shadow-sm pb-2">
+    <img class="card-img-top mb-2" src="assets/img/class-2.jpg" alt="" />
+    <div class="card-body text-center">
+      <h4 *ngIf="x!= null  && x != undefined" class="card-title">{{x.nom}}</h4>
+      
+    </div>
+    <div class="card-footer bg-transparent py-4 px-5">
+      <div class="row border-bottom" *ngIf="x!= null  && x != undefined">
+        <div class="col-6 py-1 text-right border-right">
+          <strong>description</strong>
+        </div>
+        <div class="col-6 py-1">{{x.description}}</div>
+      </div>
+      <div class="row border-bottom" *ngIf="x!= null  && x != undefined">
+        <div class="col-6 py-1 text-right border-right">
+          <strong>duration</strong>
+        </div>
+        <div class="col-6 py-1">{{x.duration}}</div>
+      </div>
+   
+    
+    </div>
+  
+  </div>

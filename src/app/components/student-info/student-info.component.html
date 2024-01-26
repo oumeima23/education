@@ -1,0 +1,30 @@
+<app-banner [a]="title"></app-banner>
+
+<div class="widget-next-match container">
+    <table class="table custom-table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">name</th>
+          <th scope="col">age</th>
+          <th scope="col">tel</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <th scope="row">{{student.id}}</th>
+          <td>{{student.name}}</td>
+          <td>{{student.age}}</td>
+          <td>{{student.tel}}</td>
+         
+          <td *ngIf="isDisplayed">
+              <button class="btn btn-success" (click)="goToDisplayStudent(student.id)">Display</button>
+              <button class="btn btn-warning">Edit</button>
+              <button class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>

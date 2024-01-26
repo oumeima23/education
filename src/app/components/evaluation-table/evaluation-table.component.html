@@ -1,0 +1,41 @@
+
+
+
+  <button style="margin-bottom: 10px ; float: right;" class="btn btn-success" (click)="addEval()"><i class="fas fa-plus"></i></button>
+
+
+  <table class="table custom-table">
+    <thead>
+      <tr>
+   
+        <th scope="col">Nom course</th>
+        <th scope="col">Etudiant</th>
+        <th scope="col">Note</th>
+        <th scope="col">Evluation</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let course of evaluations">
+        <tr *ngIf="course.courseEvaluations.length === 0">
+            <td [attr.rowspan]="1">{{ course.courseName }}</td>
+            <td colspan="3">No evaluations for {{ course.courseName }}</td>
+        </tr>
+        <tr *ngFor="let evaluation of course.courseEvaluations">
+            <td *ngIf="course.courseEvaluations.indexOf(evaluation) === 0"
+                [attr.rowspan]="course.courseEvaluations.length">
+                {{ course.courseName }}
+            </td>
+            <td>{{ evaluation.studentName }}</td>
+            <td>{{ evaluation.note }}</td>
+            <td>{{ evaluation.evaluation }}</td>
+            <td>
+              <button class="btn btn-warning"(click)="goToEditEval(course.courseId , evaluation.studentId)" ><i class="fas fa-edit"></i></button>
+          
+            
+            </td>
+        </tr>
+    </ng-container>
+  
+    </tbody>
+  </table>

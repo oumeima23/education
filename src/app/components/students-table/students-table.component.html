@@ -1,0 +1,39 @@
+
+
+<div class="widget-next-match container">
+  <table class="table custom-table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">image</th>
+        <th scope="col">firstName</th>
+        <th scope="col">lastName</th>
+        <th scope="col">email</th>
+        <th scope="col">tel</th>
+  
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <th scope="row">{{student._id}}</th>
+        <td><img class="roundedImg" [src]=" student.image"> </td>
+        <td>{{student.firstName}}</td>
+        <td>{{student.lastName}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.tel}}</td>
+
+       
+       
+        <td *ngIf="isDisplayed">
+
+            <button style="margin-right: 10px;"  class="btn btn-danger"(click)="goToDeletStudent(student._id)"><i class="fas fa-trash"></i></button>
+            <button class="btn btn-info"(click)="goToAffectation(student._id)"><i class="fas fa-arrow-right"></i></button>
+        </td>
+      </tr>
+    
+    </tbody>
+  </table>
+</div>
+
+

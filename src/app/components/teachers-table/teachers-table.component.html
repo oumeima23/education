@@ -1,0 +1,38 @@
+
+
+<div class="widget-next-match container">
+  <table class="table custom-table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">firstName</th>
+        <th scope="col">lastName</th>
+        <th scope="col">speciality</th>
+        <th scope="col">active</th>
+
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let teacher of teachers ">
+        <th scope="row">{{teacher._id}}</th>
+        <td>{{teacher.firstName}}</td>
+        <td>{{teacher.lastName}}</td>
+        <td>{{teacher.speciality}}</td>
+        <td>
+          <i *ngIf="teacher.active" class="fas fa-check" style="color:green"></i>
+          <i  *ngIf="!teacher.active"  class="fas fa-ban" style="color:red"></i>
+
+        </td>
+        <td>
+            <button style="margin-right: 10px;"  class="btn btn-warning" (click)="goToEditTeacher(teacher._id)"><i class="fas fa-edit"></i></button>
+            <button style="margin-right: 10px;" class="btn btn-danger" (click)=" deleteTeacherById (teacher._id)"><i class="fas fa-trash"></i></button>
+            <button class="btn btn-info" *ngIf="!teacher.active" (click)=" activateTeacher (teacher._id)"><i class="fas fa-check"></i></button>
+        </td>
+      </tr>
+  
+    </tbody>
+  </table>
+</div>
+
+  

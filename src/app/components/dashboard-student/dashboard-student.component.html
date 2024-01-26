@@ -1,0 +1,25 @@
+<table class="table custom-table">
+    <thead>
+      <tr>
+   
+        <th scope="col">Nom course</th>
+    
+        <th scope="col">Note</th>
+        <th scope="col">Evluation</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+ 
+        
+        <tr *ngFor="let item of evaluations">
+           
+            <td>{{ item.courseName }}</td>
+            <td> <span *ngIf="item.note != '0'">{{ item.note}}</span></td>
+            <td>{{ item.evaluation }}</td>
+           
+        </tr>
+  
+  
+    </tbody>
+  </table>
